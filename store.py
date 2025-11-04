@@ -33,15 +33,3 @@ class Store:
             except Exception as e:
                 print(f"Could not buy {products.name}: {e}")
         return total_price
-
-
-product_list = [
-    product.Product("MacBook Air M2", price=1450, quantity=100),
-    product.Product("Bose QuietComfort Earbuds", price=250, quantity=500),
-    product.Product("Google Pixel 7", price=500, quantity=250),
-]
-
-best_buy = Store(product_list)
-products = best_buy.get_all_products()
-print(best_buy.get_total_quantity())
-print(best_buy.order([(products[0], 1), (products[1], 2)]))
